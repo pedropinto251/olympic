@@ -1,0 +1,37 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+    body {
+        background-color: #007bff; 
+    }
+
+    .content-container {
+        background-color: white;
+        text-align: center;
+        color: black; 
+        border-radius: 15px;
+        padding: 20px; 
+        margin: 20px auto; 
+        max-width: 800px; 
+        min-height: 400px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .btn-primary {
+        background-color: #0056b3; 
+        border-color: #0056b3;
+    }
+</style>
+
+<div class="content-container">
+    <h1 class="display-4">Bem Vindo As Oporto Olympics</h1>
+    <p>Estamos felizes em tê-lo aqui!</p>
+    <a href="https://localhost:7268/Login" class="btn btn-primary">Ir para Login</a>
+</div>

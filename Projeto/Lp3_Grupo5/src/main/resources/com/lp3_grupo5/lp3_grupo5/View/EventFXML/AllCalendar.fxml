@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1237.0" style="-fx-background-color: #18191A;" stylesheets="@../stylesheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lp3_grupo5.lp3_grupo5.Controller.Event.EventCalendarController">
+    <children>
+        <Pane prefHeight="120.0" prefWidth="1237.0" style="-fx-background-color: #242526;" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label layoutX="113.0" layoutY="27.0" prefHeight="66.0" prefWidth="580.0" style="-fx-font-weight: BOLD;" text="Calendário de Eventos" textFill="WHITE">
+                    <font>
+                        <Font name="Century Gothic Bold" size="50.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Pane layoutY="114.0" prefHeight="581.0" prefWidth="1232.0">
+            <children>
+                <TableView fx:id="calendarTableView" layoutX="65.0" layoutY="38.0" prefHeight="505.0" prefWidth="1102.0" style="-fx-background-color: #3A3B3C; -fx-border-color: white;">
+                    <columns>
+                        <TableColumn fx:id="sportColumn" prefWidth="204.0" styleClass="table-column" text="Modalidade" />
+                        <TableColumn fx:id="localColumn" prefWidth="166.0" styleClass="table-column" text="Local" />
+                        <TableColumn fx:id="startColumn" prefWidth="206.0" styleClass="table-column" text="Inicio" />
+                        <TableColumn fx:id="endColumn" prefWidth="203.0" styleClass="table-column" text="Fim" />
+                        <TableColumn fx:id="yearColumn" prefWidth="78.0" styleClass="table-column" text="Ano" />
+                        <TableColumn fx:id="sportFullNameColumn" prefWidth="243.0" styleClass="table-column" text="Nome Completo do Desporto" />
+                    </columns>
+                </TableView>
+                <ComboBox fx:id="sportFilterComboBox" layoutX="65.0" layoutY="550.0" onAction="#filterBySport" prefWidth="200.0" promptText="Desporto" style="-fx-background-color: #3A3B3C; -fx-border-color: white; -fx-text-fill: WHITE;" />
+                <DatePicker fx:id="datePicker" layoutX="285.0" layoutY="550.0" onAction="#filterByDate" style="-fx-background-color: #3A3B3C; -fx-border-color: white; -fx-text-fill: WHITE;" />
+                <TextField fx:id="timeTextField" layoutX="481.0" layoutY="550.0" onAction="#filterByTime" prefWidth="100.0" promptText="HH:MM" style="-fx-background-color: none; -fx-border-color: white; -fx-border-width: 0 0 1 0; -fx-text-fill: WHITE;">
+                    <style>
+                        .text-field:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </TextField>
+            </children>
+        </Pane>
+        <Button fx:id="btnMenu" layoutX="1092.0" layoutY="44.0" onAction="#handleBtnMenu" prefHeight="53.0" prefWidth="104.0" style="-fx-background-color: none; -fx-border-color: white;" text="Menu" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+            <style>
+                .button:hover {
+                -fx-background-color: #4A4B4C;
+                -fx-cursor: hand;
+                }
+            </style>
+        </Button>
+    </children>
+</AnchorPane>

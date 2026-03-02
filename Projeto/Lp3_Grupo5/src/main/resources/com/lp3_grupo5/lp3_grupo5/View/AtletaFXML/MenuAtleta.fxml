@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="566.0" prefWidth="1123.0" style="-fx-background-color: #18191A;" stylesheets="@../stylesheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lp3_grupo5.lp3_grupo5.Controller.Menus.AthleteMenuController">
+    <children>
+        <Pane layoutY="-1.0" prefHeight="566.0" prefWidth="1236.0" style="-fx-background-color: #242526;">
+            <children>
+                <ImageView fitHeight="543.0" fitWidth="1236.0" layoutX="-1.0" layoutY="-3.0" smooth="false" />
+                <Button fx:id="btnSair" layoutX="1076.0" layoutY="53.0" onAction="#handleBtnSair" prefHeight="53.0" prefWidth="104.0" style="-fx-background-color: none; -fx-border-color: white;" text="Menu" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <effect>
+                        <Glow />
+                    </effect>
+                    <style>
+                        .button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </Button>
+                <JFXButton fx:id="btn_IndParticipations" layoutX="942.0" layoutY="158.0" onAction="#handleBtnIndParticipations" prefHeight="215.0" prefWidth="244.0" style="-fx-background-color: none; -fx-border-color: white;" text="Participações&#10;Individuais&#10;" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Century Gothic Bold" size="30.0" />
+                    </font>
+                    <effect>
+                        <Glow />
+                    </effect>
+                    <style>
+                        .jfx-button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </JFXButton>
+                <Label layoutX="387.0" layoutY="47.0" prefHeight="66.0" prefWidth="492.0" style="-fx-font-weight: BOLD;" text="Gestão de Atletas" textFill="WHITE">
+                    <font>
+                        <Font name="Century Gothic Bold" size="50.0" />
+                    </font>
+                    <effect>
+                        <Glow />
+                    </effect>
+                </Label>
+                <FontAwesomeIconView fill="WHITE" glyphName="BANK" layoutX="67.0" layoutY="97.0" size="50">
+                    <effect>
+                        <Glow />
+                    </effect>
+                </FontAwesomeIconView>
+                <JFXButton fx:id="btnlistAtleta" layoutX="67.0" layoutY="158.0" onAction="#handleBtnListAtleta" prefHeight="215.0" prefWidth="237.5" style="-fx-background-color: none; -fx-border-color: white;" text="Listar e &#10;Eliminar&#10;Atleta&#10;" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Century Gothic Bold" size="30.0" />
+                    </font>
+                    <effect>
+                        <Glow />
+                    </effect>
+                    <style>
+                        .jfx-button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </JFXButton>
+                <JFXButton fx:id="btn_EditAtleta" layoutX="652.0" layoutY="158.0" onAction="#handleBtnEditAtleta" prefHeight="215.0" prefWidth="237.5" style="-fx-background-color: none; -fx-border-color: white;" text="Editar&#10;Atleta&#10;" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Century Gothic Bold" size="30.0" />
+                    </font>
+                    <effect>
+                        <Glow />
+                    </effect>
+                    <style>
+                        .jfx-button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </JFXButton>
+                <JFXButton fx:id="btn_AddAtleta" layoutX="358.0" layoutY="158.0" onAction="#handleBtnAddAtleta" prefHeight="215.0" prefWidth="237.5" style="-fx-background-color: none; -fx-border-color: white;" text="Adicionar &#10;Atleta&#10;" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Century Gothic Bold" size="30.0" />
+                    </font>
+                    <effect>
+                        <Glow />
+                    </effect>
+                    <style>
+                        .jfx-button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </JFXButton>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

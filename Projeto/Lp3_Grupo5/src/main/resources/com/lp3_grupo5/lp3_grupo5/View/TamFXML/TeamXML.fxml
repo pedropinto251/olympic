@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="725.0" prefWidth="618.0" style="-fx-background-color: #18191A;" stylesheets="@../stylesheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lp3_grupo5.lp3_grupo5.Controller.Team.TeamFXMLController">
+    <children>
+        <!-- Botão para escolher XML -->
+        <Label layoutX="69.0" layoutY="30.0" text="Escolha o arquivo XML:" textFill="#FFFFFF">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+        <Button layoutX="289.0" layoutY="22.0" onAction="#handleSelectXML" prefHeight="26.0" prefWidth="236.0" style="-fx-background-color: none; -fx-border-color: white;" text="Selecionar XML" textFill="WHITE" fx:id="xmlButton">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+            <style>
+                .button:hover {
+                -fx-background-color: #4A4B4C;
+                -fx-cursor: hand;
+                }
+            </style>
+        </Button>
+
+        <!-- Botão para escolher XSD -->
+        <Label layoutX="70.0" layoutY="75.0" prefHeight="25.0" prefWidth="172.0" text="Escolha o arquivo XSD:" textFill="#FFFFFF">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+        <Button layoutX="289.0" layoutY="67.0" onAction="#handleSelectXSD" prefHeight="26.0" prefWidth="236.0" style="-fx-background-color: none; -fx-border-color: white;" text="Selecionar XSD" textFill="WHITE" fx:id="xsdButton">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+            <style>
+                .button:hover {
+                -fx-background-color: #4A4B4C;
+                -fx-cursor: hand;
+                }
+            </style>
+        </Button>
+
+        <!-- Área de status para mensagens -->
+        <TextArea fx:id="statusArea" editable="false" layoutX="40.0" layoutY="376.0" prefHeight="100" prefWidth="544.0" style="-fx-background-color: none; -fx-border-color: white; -fx-text-fill: WHITE;" wrapText="true" />
+        <Button fx:id="carregarButton" layoutX="40.0" layoutY="498.0" onAction="#handleCarregarEquipes" prefHeight="53.0" prefWidth="183.0" style="-fx-background-color: none; -fx-border-color: white;" text="Carregar Equipas" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+            <style>
+                .button:hover {
+                -fx-background-color: #4A4B4C;
+                -fx-cursor: hand;
+                }
+            </style>
+        </Button>
+        <TableView fx:id="teamTableView" layoutX="40.0" layoutY="116.0" prefHeight="246.0" prefWidth="544.0" styleClass="table-view">
+            <columns>
+                <TableColumn fx:id="nameColumn" text="Nome" />
+                <TableColumn fx:id="countryColumn" prefWidth="90.0" text="País" />
+                <TableColumn fx:id="genreColumn" prefWidth="70.0" text="Género" />
+                <TableColumn fx:id="sportColumn" prefWidth="155.0" text="Desporto" />
+                <TableColumn fx:id="foundationYearColumn" prefWidth="125.0" text="Ano de Fundação" />
+            </columns>
+        </TableView>
+        <Button fx:id="menuBtn" layoutX="407.0" layoutY="605.0" onAction="#handleVoltarMenu" prefHeight="53.0" prefWidth="165.0" style="-fx-background-color: none; -fx-border-color: white;" text="Menu" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+            <style>
+                .button:hover {
+                -fx-background-color: #4A4B4C;
+                -fx-cursor: hand;
+                }
+            </style>
+        </Button>
+        <Button fx:id="btnBack" layoutX="40.0" layoutY="605.0" onAction="#handleBtnBack" prefHeight="53.0" prefWidth="165.0" style="-fx-background-color: none; -fx-border-color: white;" text="Retroceder" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+            <style>
+                .button:hover {
+                -fx-background-color: #4A4B4C;
+                -fx-cursor: hand;
+                }
+            </style>
+        </Button>
+    </children>
+</AnchorPane>

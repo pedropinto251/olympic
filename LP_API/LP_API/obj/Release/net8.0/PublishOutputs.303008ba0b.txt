@@ -1,0 +1,10 @@
+C:\Users\Américo Pinto\Desktop\LP3_Grupo 5\LP3_G5\LP_API\LP_API\bin\Release\net8.0\publish\LP_API.exe
+C:\Users\Américo Pinto\Desktop\LP3_Grupo 5\LP3_G5\LP_API\LP_API\bin\Release\net8.0\publish\appsettings.Development.json
+C:\Users\Américo Pinto\Desktop\LP3_Grupo 5\LP3_G5\LP_API\LP_API\bin\Release\net8.0\publish\appsettings.json
+C:\Users\Américo Pinto\Desktop\LP3_Grupo 5\LP3_G5\LP_API\LP_API\bin\Release\net8.0\publish\vercel.json
+C:\Users\Américo Pinto\Desktop\LP3_Grupo 5\LP3_G5\LP_API\LP_API\bin\Release\net8.0\publish\LP_API.dll
+C:\Users\Américo Pinto\Desktop\LP3_Grupo 5\LP3_G5\LP_API\LP_API\bin\Release\net8.0\publish\LP_API.deps.json
+C:\Users\Américo Pinto\Desktop\LP3_Grupo 5\LP3_G5\LP_API\LP_API\bin\Release\net8.0\publish\LP_API.runtimeconfig.json
+C:\Users\Américo Pinto\Desktop\LP3_Grupo 5\LP3_G5\LP_API\LP_API\bin\Release\net8.0\publish\LP_API.pdb
+C:\Users\Américo Pinto\Desktop\LP3_Grupo 5\LP3_G5\LP_API\LP_API\bin\Release\net8.0\publish\Mailjet.Client.dll
+C:\Users\Américo Pinto\Desktop\LP3_Grupo 5\LP3_G5\LP_API\LP_API\bin\Release\net8.0\publish\Newtonsoft.Json.dll

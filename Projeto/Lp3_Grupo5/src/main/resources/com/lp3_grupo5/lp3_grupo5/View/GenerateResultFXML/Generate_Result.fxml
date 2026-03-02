@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefWidth="1163.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lp3_grupo5.lp3_grupo5.Controller.Sports.SportResultGenerateController">
+    <AnchorPane prefHeight="741.0" prefWidth="1163.0" style="-fx-background-color: #18191A;" stylesheets="@../stylesheet.css">
+        <children>
+            <Button fx:id="btnMenu" layoutX="849.0" layoutY="22.0" onAction="#handleBackToMenu" prefHeight="57.0" prefWidth="205.0" style="-fx-background-color: none; -fx-border-color: white;" text="Menu" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+                <style>
+                    .button:hover {
+                    -fx-background-color: #4A4B4C;
+                    -fx-cursor: hand;
+                    }
+                </style>
+            </Button>
+            <Button layoutX="110.0" layoutY="660.0" onAction="#handleGenerateResults" prefHeight="57.0" prefWidth="205.0" style="-fx-background-color: none; -fx-border-color: white;" text="Iniciar Desporto" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+                <style>
+                    .button:hover {
+                    -fx-background-color: #4A4B4C;
+                    -fx-cursor: hand;
+                    }
+                </style>
+            </Button>
+            <Button layoutX="837.0" layoutY="660.0" onAction="#handleGenerateAthletes" prefHeight="57.0" prefWidth="217.0" style="-fx-background-color: none; -fx-border-color: white;" text="Ver atletas associados" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+                <style>
+                    .button:hover {
+                    -fx-background-color: #4A4B4C;
+                    -fx-cursor: hand;
+                    }
+                </style>
+            </Button>
+
+            <Label fx:id="statusLabel" layoutX="102.0" layoutY="606.0" prefHeight="57.0" prefWidth="944.0" text="    Aguardando..." textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </Label>
+            <TableView fx:id="sportTV" layoutX="110.0" layoutY="87.0" prefHeight="311.0" prefWidth="944.0" styleClass="table-view">
+                <columns>
+                    <TableColumn fx:id="sportIdTC" prefWidth="36.0" styleClass="table-column" text="ID" />
+                    <TableColumn fx:id="sportNameTC" prefWidth="110.0" styleClass="table-column" text="Nome" />
+                    <TableColumn fx:id="sportTypeTC" minWidth="2.0" prefWidth="81.0" styleClass="table-column" text="Tipo" />
+                    <TableColumn fx:id="sportGenderTC" prefWidth="95.0" styleClass="table-column" text="Género" />
+                    <TableColumn fx:id="sportDescriptionTC" prefWidth="136.0" styleClass="table-column" text="Descrição" />
+                    <TableColumn fx:id="sportMinParticipantsTC" prefWidth="134.0" styleClass="table-column" text="Min. Participantes" />
+                    <TableColumn fx:id="sportMeasureTC" prefWidth="117.0" styleClass="table-column" text="Tipo Pontuação" />
+                    <TableColumn fx:id="sportGameTC" prefWidth="106.0" styleClass="table-column" text="Jogos" />
+                    <TableColumn fx:id="inativeTC" prefWidth="110.0" styleClass="table-column" text="Desativado" />
+                </columns>
+            </TableView>
+            <TableView fx:id="resultTV" layoutX="110.0" layoutY="409.0" prefHeight="200.0" prefWidth="944.0" styleClass="table-view">
+                <columns>
+                    <TableColumn fx:id="resultSportNameTC" prefWidth="200.0" styleClass="table-column" text="Desporto" />
+                    <TableColumn fx:id="resultValueTC" prefWidth="317.0" styleClass="table-column" text="Resultado" />
+                    <TableColumn fx:id="resultMedalTC" prefWidth="190.5" styleClass="table-column" text="Medalha" />
+                    <TableColumn fx:id="resultAthleteNameTC" prefWidth="235.5" styleClass="table-column" text="Atleta" />
+                </columns>
+            </TableView>
+            <Button fx:id="btnBack" layoutX="110.0" layoutY="22.0" onAction="#handleBtnBack" prefHeight="57.0" prefWidth="205.0" style="-fx-background-color: none; -fx-border-color: white;" text="Retroceder" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+                <style>
+                    .button:hover {
+                    -fx-background-color: #4A4B4C;
+                    -fx-cursor: hand;
+                    }
+                </style>
+            </Button>
+        </children>
+    </AnchorPane>
+</VBox>

@@ -1,0 +1,136 @@
+﻿@model IEnumerable<LP_API.Model.Game>
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding-top: 56px;
+        }
+
+        .navbar {
+            background-color: #007bff;
+        }
+
+        .navbar-brand, .nav-link, .navbar-text {
+            color: white !important;
+        }
+
+        .footer {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .game-container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 10px;
+            padding-bottom: 60px; /* Espaço para o footer */
+        }
+
+        .game-item {
+            padding: 10px;
+            background-color: #007bff;
+            border-color: #007bff;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .settings-icon {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        a {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <a class="navbar-brand" href="#">Oporto Olympics</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Login/Success">Home <span class="sr-only">(página atual)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Game">Ver Jogos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Ticket/Index">Bilhetes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/ChangePassword">Change Password</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle settings-icon" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-cog"></i> Settings
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/Account/DeleteAccount">Apagar Conta</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <br>
+        <h2 class="text-center">Jogos</h2>
+        <form method="get" class="mb-4">
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" name="sport" class="form-control" placeholder="Pesquisar por desporto" value="@ViewBag.Sport" />
+                </div>
+                <div class="col">
+                    <input type="date" name="startDate" class="form-control" value="@ViewBag.StartDate" />
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-primary">Pesquisar</button>
+                </div>
+            </div>
+        </form>
+        <div class="game-container">
+            @foreach (var game in Model)
+            {
+                <div class="game-item">
+                    <a href="/Game/Details?gameId=@game.Id" class="game-card">
+                        <h4>@game.Sport</h4>
+                        <p><strong>Local:</strong> @game.Location</p>
+                        <p><strong>Data de Início:</strong> @game.StartDate.ToString("dd/MM/yyyy HH:mm")</p>
+                        <p><strong>Data de Término:</strong> @game.EndDate.ToString("dd/MM/yyyy HH:mm")</p>
+                        <p><strong>Capacidade:</strong> @game.Capacity</p>
+                        <p><strong>Evento Ativo:</strong> @(game.Active ? "Sim" : "Não")</p>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted">© 2025 Oporto Olympics. Todos os direitos reservados.</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Adiciona FontAwesome para o ícone de engrenagem -->
+</body>
+</html>

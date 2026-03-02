@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="566.0" prefWidth="1123.0" style="-fx-background-color: #18191A;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lp3_grupo5.lp3_grupo5.Controller.Menus.MenuController">
+    <children>
+        <Pane layoutY="-1.0" prefHeight="761.0" prefWidth="1408.0" style="-fx-background-color: #242526;">
+            <children>
+                <Button fx:id="btnSair" layoutX="42.0" layoutY="669.0" onAction="#handleBtnSair" prefHeight="53.0" prefWidth="104.0" style="-fx-background-color: none; -fx-border-color: white;" text="Sair" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <effect>
+                        <DropShadow color="#000000" radius="10" />
+                    </effect>
+                    <style>
+                        .button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </Button>
+                <Pane layoutX="1.0" prefHeight="120.0" prefWidth="1408.0">
+                    <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BANK" layoutX="47.0" layoutY="78.0" size="50">
+                            <effect>
+                                <Glow />
+                            </effect>
+                        </FontAwesomeIconView>
+                        <Button fx:id="btnCalendario" layoutX="1255.0" layoutY="34.0" onAction="#handleBtnCalendar" prefHeight="53.0" prefWidth="110.0" style="-fx-background-color: none; -fx-border-color: white;" text="Calendário" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                            <effect>
+                                <DropShadow color="#000000" radius="10" />
+                            </effect>
+                            <style>
+                                .button:hover {
+                                -fx-background-color: #4A4B4C;
+                                -fx-cursor: hand;
+                                }
+                            </style>
+                        </Button>
+                        <Text fill="WHITE" fontSmoothingType="LCD" layoutX="512.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Oporto Olympics" wrappingWidth="384.39453125">
+                            <font>
+                                <Font name="System Bold" size="40.0" />
+                            </font>
+                            <effect>
+                                <Glow />
+                            </effect>
+                        </Text>
+                    </children>
+                </Pane>
+                <JFXButton fx:id="btnMenuFXML" layoutX="42.0" layoutY="187.0" onAction="#handleBtnMenuFXML" prefHeight="215.0" prefWidth="237.5" style="-fx-background-color: none; -fx-border-color: white;" text="Carregar &#10;XML&#10;&#10;" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Century Gothic Bold" size="30.0" />
+                    </font>
+                    <effect>
+                        <DropShadow color="#000000" radius="10" />
+                    </effect>
+                    <style>
+                        .jfx-button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </JFXButton>
+                <JFXButton fx:id="btn_MenuLocais" layoutX="313.0" layoutY="187.0" onAction="#handleBtnMenuLocais" prefHeight="215.0" prefWidth="237.5" style="-fx-background-color: none; -fx-border-color: white;" text="Locais&#10;" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Century Gothic Bold" size="30.0" />
+                    </font>
+                    <effect>
+                        <DropShadow color="#000000" radius="10" />
+                    </effect>
+                    <style>
+                        .jfx-button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </JFXButton>
+                <JFXButton fx:id="btn_MenuEventos" layoutX="586.0" layoutY="187.0" onAction="#handleBtnMenuEventos" prefHeight="215.0" prefWidth="237.5" style="-fx-background-color: none; -fx-border-color: white;" text="Eventos" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Century Gothic Bold" size="30.0" />
+                    </font>
+                    <effect>
+                        <DropShadow color="#000000" radius="10" />
+                    </effect>
+                    <style>
+                        .jfx-button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </JFXButton>
+                <JFXButton fx:id="btn_MenuAtletas" layoutX="859.0" layoutY="187.0" onAction="#handleBtnMenuAtletas" prefHeight="215.0" prefWidth="237.5" style="-fx-background-color: none; -fx-border-color: white;" text="Atletas" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Century Gothic Bold" size="30.0" />
+                    </font>
+                    <effect>
+                        <DropShadow color="#000000" radius="10" />
+                    </effect>
+                    <style>
+                        .jfx-button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </JFXButton>
+                <JFXButton fx:id="btn_MenuModalidades" layoutX="1130.0" layoutY="187.0" onAction="#handleBtnMenuModalidades" prefHeight="215.0" prefWidth="237.5" style="-fx-background-color: none; -fx-border-color: white;" text="Modalidades" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Century Gothic Bold" size="30.0" />
+                    </font>
+                    <effect>
+                        <DropShadow color="#000000" radius="10" />
+                    </effect>
+                    <style>
+                        .jfx-button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </JFXButton>
+                <Button fx:id="btnPassword" layoutX="1264.0" layoutY="669.0" onAction="#handleBtnPassword" prefHeight="53.0" prefWidth="104.0" style="-fx-background-color: none; -fx-border-color: white;" text="Password" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                    <effect>
+                        <DropShadow color="#000000" radius="10" />
+                    </effect>
+                    <style>
+                        .button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </Button>
+                <JFXButton fx:id="btn_MenuEquipas" layoutX="194.0" layoutY="421.0" onAction="#handleBtnMenuEquipas" prefHeight="215.0" prefWidth="237.5" style="-fx-background-color: none; -fx-border-color: white;" text="Equipas" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Century Gothic Bold" size="30.0" />
+                    </font>
+                    <effect>
+                        <DropShadow color="#000000" radius="10" />
+                    </effect>
+                    <style>
+                        .jfx-button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </JFXButton>
+                <JFXButton fx:id="btn_MenuGestaoEvento" layoutX="456.0" layoutY="421.0" onAction="#handleBtnMenuGestaoEvento" prefHeight="215.0" prefWidth="237.5" style="-fx-background-color: none; -fx-border-color: white;" text="Gerir Evento" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Century Gothic Bold" size="30.0" />
+                    </font>
+                    <effect>
+                        <DropShadow color="#000000" radius="10" />
+                    </effect>
+                    <style>
+                        .jfx-button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </JFXButton>
+                <JFXButton fx:id="btn_MenuAPI" layoutX="726.0" layoutY="421.0" onAction="#handleBtnMenuAPI" prefHeight="215.0" prefWidth="237.5" style="-fx-background-color: none; -fx-border-color: white;" text="Clientes API" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Century Gothic Bold" size="30.0" />
+                    </font>
+                    <effect>
+                        <DropShadow color="#000000" radius="10" />
+                    </effect>
+                    <style>
+                        .jfx-button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </JFXButton>
+                <JFXButton fx:id="btn_JogosAPI1" layoutX="1011.0" layoutY="421.0" onAction="#handleBtnJogosAPI" prefHeight="215.0" prefWidth="237.5" style="-fx-background-color: none; -fx-border-color: white;" text="Jogos API" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Century Gothic Bold" size="30.0" />
+                    </font>
+                    <effect>
+                        <DropShadow color="#000000" radius="10" />
+                    </effect>
+                    <style>
+                        .jfx-button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </JFXButton>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

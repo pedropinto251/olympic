@@ -1,0 +1,17 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "LP_API/LP_API.csproj",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "LP_API/bin/Release/net8.0/publish"
+            }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "LP_API/bin/Release/net8.0/publish/wwwroot/$1"
+        }
+    ]

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1062.0" style="-fx-background-color: #18191A;" stylesheets="@../stylesheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lp3_grupo5.lp3_grupo5.Controller.Team.TeamEditController">
+   <children>
+      <Text fill="#FFFFFF" fontSmoothingType="LCD" layoutX="335.0" layoutY="96.0" stroke="#0d0303" strokeType="OUTSIDE" strokeWidth="0.0" text="Editar Equipa" textAlignment="CENTER" wrappingWidth="393.13671875">
+         <font>
+            <Font name="Century Gothic Bold" size="50.0" />
+         </font>
+      </Text>
+      <TextField fx:id="foundationYearTF" layoutX="376.0" layoutY="355.0" prefHeight="25.0" prefWidth="311.0" promptText="Ano de Fundação" style="-fx-background-color: none; -fx-border-color: white; -fx-border-width: 0 0 1 0; -fx-text-fill: WHITE;">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <style>
+            .text-field:hover {
+            -fx-background-color: #4A4B4C;
+            -fx-cursor: hand;
+            }
+         </style>
+      </TextField>
+      <Button fx:id="btnEdit" layoutX="376.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleBtnEdit" prefHeight="36.0" prefWidth="311.0" style="-fx-background-color: none; -fx-border-color: white;" text="Editar Equipa" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <style>
+            .button:hover {
+            -fx-background-color: #4A4B4C;
+            -fx-cursor: hand;
+            }
+         </style>
+      </Button>
+      <Button fx:id="btnMenu" layoutX="840.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleBtnMenu" prefHeight="49.0" prefWidth="143.0" style="-fx-background-color: none; -fx-border-color: white;" text="Menu" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <style>
+            .button:hover {
+            -fx-background-color: #4A4B4C;
+            -fx-cursor: hand;
+            }
+         </style>
+      </Button>
+      <Button fx:id="btnBack" layoutX="82.0" layoutY="52.0" mnemonicParsing="false" onAction="#handleBtnBack" prefHeight="49.0" prefWidth="150.0" style="-fx-background-color: none; -fx-border-color: white;" text="Retroceder" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <style>
+            .button:hover {
+            -fx-background-color: #4A4B4C;
+            -fx-cursor: hand;
+            }
+         </style>
+      </Button>
+      <ChoiceBox fx:id="countryCB" layoutX="376.0" layoutY="264.0" prefHeight="25.0" prefWidth="311.0" />
+      <ChoiceBox fx:id="sportCB" layoutX="376.0" layoutY="320.0" prefHeight="25.0" prefWidth="311.0" />
+      <ChoiceBox fx:id="nameCB" layoutX="376.0" layoutY="199.0" prefHeight="25.0" prefWidth="311.0" />
+      <Text fill="#FFFFFF" layoutX="376.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modalidade:">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#FFFFFF" layoutX="376.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="País:">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#FFFFFF" layoutX="376.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

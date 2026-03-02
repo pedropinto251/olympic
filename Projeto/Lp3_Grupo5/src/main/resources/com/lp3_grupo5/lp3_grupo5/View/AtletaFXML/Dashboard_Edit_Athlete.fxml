@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="649.0" prefWidth="560.0" style="-fx-background-color: #18191A;" stylesheets="@../stylesheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lp3_grupo5.lp3_grupo5.Controller.Athlete.AthleteEditController">
+    <children>
+        <Text fill="WHITE" layoutX="246.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Editar Atleta" wrappingWidth="66.041015625" />
+
+        <Label layoutX="180.0" layoutY="128.0" text="ID do Atleta:" textFill="#FFFFFF" />
+        <ChoiceBox fx:id="athleteSelect" layoutX="180.0" layoutY="153.0" prefWidth="200.0" />
+        <TextField fx:id="nameField" layoutX="180.0" layoutY="178.0" prefWidth="200.0" promptText="Digite o Nome do Atleta" style="-fx-background-color: none; -fx-border-color: white; -fx-border-width: 0 0 1 0; -fx-text-fill: WHITE;" />
+
+        <Label layoutX="180.0" layoutY="210.0" text="País:" textFill="#FFFFFF" />
+        <ChoiceBox fx:id="countrySelect" layoutX="181.0" layoutY="234.0" prefWidth="200.0" />
+
+        <Label layoutX="182.0" layoutY="259.0" text="Gênero:" textFill="#FFFFFF" />
+        <ChoiceBox fx:id="genreSelect" layoutX="181.0" layoutY="281.0" prefWidth="200.0" />
+        <TextField fx:id="heightField" layoutX="180.0" layoutY="312.0" prefWidth="200.0" promptText="Digite a Altura (cm)" style="-fx-background-color: none; -fx-border-color: white; -fx-border-width: 0 0 1 0; -fx-text-fill: WHITE;" />
+        <TextField fx:id="weightField" layoutX="182.0" layoutY="339.0" prefWidth="200.0" promptText="Digite o Peso (kg)" style="-fx-background-color: none; -fx-border-color: white; -fx-border-width: 0 0 1 0; -fx-text-fill: WHITE;" />
+
+        <Label layoutX="50.0" layoutY="276.0" textFill="#FFFFFF" />
+        <DatePicker fx:id="dobPicker" layoutX="181.0" layoutY="376.0" prefWidth="200.0" promptText="Data de Nascimento" style="-fx-background-color: none; -fx-border-color: white; -fx-border-width: 0 0 1 0; -fx-text-fill: WHITE;" />
+
+        <Button fx:id="btnEdit" layoutX="228.0" layoutY="544.0" onAction="#handleBtnEdit" prefHeight="53.0" prefWidth="104.0" style="-fx-background-color: none; -fx-border-color: white;" text="Editar" textFill="WHITE" />
+
+        <Button fx:id="btnMenu" layoutX="430.0" layoutY="29.0" onAction="#handleBtnMenu" prefHeight="53.0" prefWidth="104.0" style="-fx-background-color: none; -fx-border-color: white;" text="Menu" textFill="WHITE" />
+
+        <Button fx:id="btnBack" layoutX="38.0" layoutY="29.0" onAction="#handleBtnBack" prefHeight="53.0" prefWidth="104.0" style="-fx-background-color: none; -fx-border-color: white;" text="Retroceder" textFill="WHITE" />
+
+        <Button fx:id="uploadAthleteButton" layoutX="181.0" layoutY="412.0" onAction="#handleUploadAthlete" prefHeight="27.0" prefWidth="200.0" style="-fx-background-color: none; -fx-border-color: white;" text="Selecione a foto do atleta" textFill="WHITE" />
+        <ImageView fx:id="athleteImageView" fitHeight="83.0" fitWidth="97.0" layoutX="231.0" layoutY="449.0" pickOnBounds="true" preserveRatio="true" />
+    </children>
+</Pane>

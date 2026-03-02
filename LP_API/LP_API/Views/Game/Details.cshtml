@@ -1,0 +1,153 @@
+﻿@model LP_API.Model.Game
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Jogo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .card {
+            margin-top: 20px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-body {
+            padding: 30px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+                border-color: #0056b3;
+            }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        h4 {
+            color: #007bff;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Detalhes do Jogo</h2>
+        <div class="card">
+            <div class="card-body">
+                <h4>@Model.Sport</h4>
+                <p><strong>Local:</strong> @Model.Location</p>
+                <p><strong>Data de Início:</strong> @Model.StartDate.ToString("dd/MM/yyyy HH:mm")</p>
+                <p><strong>Data de Término:</strong> @Model.EndDate.ToString("dd/MM/yyyy HH:mm")</p>
+                <p><strong>Capacidade:</strong> @Model.Capacity</p>
+                <p><strong>Evento Ativo:</strong> @(Model.Active ? "Sim" : "Não")</p>
+                <form method="post" action="/Game/CreateTicket">
+                    <input type="hidden" name="GameId" value="@Model.Id" />
+                    <button type="submit" class="btn btn-primary">Comprar Bilhete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Sucesso -->
+    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="successModalLabel">Compra Bem-Sucedida</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    O seu bilhete foi comprado com sucesso!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="successCloseButton">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Erro -->
+    <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="errorModalLabel">Erro na Compra</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Ocorreu um erro ao comprar o bilhete. Por favor, tente novamente.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="errorCloseButton">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation-unobtrusive@3.2.11/dist/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Formulário de compra de bilhete
+            $('form[action="/Game/CreateTicket"]').on('submit', function (e) {
+                e.preventDefault(); // Impede o envio padrão do formulário
+
+                var form = $(this);
+                var url = form.attr('action');
+                var formData = form.serialize();
+
+                $.post(url, formData)
+                    .done(function (response) {
+                        // Exibir modal de sucesso
+                        $('#successModal').modal('show');
+                    })
+                    .fail(function (xhr) {
+                        if (xhr.status === 406) {
+                            // Exibir modal de erro
+                            $('#errorModal').modal('show');
+                        } else {
+                            // Tratar outros erros
+                            alert('Erro ao comprar bilhete. Por favor, tente novamente.');
+                        }
+                    });
+            });
+
+            // Redirecionar ao fechar o modal de sucesso
+            $('#successModal').on('hidden.bs.modal', function () {
+                window.location.href = "/Game";
+            });
+
+            // Redirecionar ao fechar o modal de erro
+            $('#errorModal').on('hidden.bs.modal', function () {
+                window.location.href = "/Game";
+            });
+        });
+    </script>
+</body>
+</html>

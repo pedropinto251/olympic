@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: #18191A;" stylesheets="@../stylesheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lp3_grupo5.lp3_grupo5.Controller.Sports.ValueIntervalsEditorController">
+    <children>
+        <VBox alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="600.0" prefWidth="960.0" spacing="20">
+            <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Editar Intervalos de Valores" textFill="#FFFFFF">
+                <font>
+                    <Font name="Century Gothic Bold" size="24.0" />
+                </font>
+            </Label>
+            <HBox alignment="CENTER" spacing="10">
+                <CheckBox fx:id="timeCheckBox" text="Tempo" textFill="#FFFFFF" />
+                <CheckBox fx:id="distanceCheckBox" text="Distância" textFill="#FFFFFF" />
+                <CheckBox fx:id="pointsCheckBox" text="Pontos" textFill="#FFFFFF" />
+            </HBox>
+            <Label text="Valores de Intervalo:" textFill="#FFFFFF">
+                <font>
+                    <Font name="Century Gothic Bold" size="18.0" />
+                </font>
+            </Label>
+            <HBox alignment="CENTER" spacing="10">
+                <TextField fx:id="minValueField" promptText="Valor Mínimo" style="-fx-background-color: none; -fx-border-color: white; -fx-border-width: 0 0 1 0; -fx-text-fill: WHITE;">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <style>
+                        .text-field:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </TextField>
+                <TextField fx:id="maxValueField" promptText="Valor Máximo" style="-fx-background-color: none; -fx-border-color: white; -fx-border-width: 0 0 1 0; -fx-text-fill: WHITE;">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <style>
+                        .text-field:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </TextField>
+            </HBox>
+            <HBox alignment="CENTER" spacing="20">
+                <Button onAction="#handleSave" style="-fx-background-color: none; -fx-border-color: white;" text="Salvar" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <style>
+                        .button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </Button>
+                <Button onAction="#handleBtnBack" prefHeight="29.0" prefWidth="123.0" style="-fx-background-color: none; -fx-border-color: white;" text="Retroceder" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <style>
+                        .button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </Button>
+                <Button onAction="#handleBackToMenu" style="-fx-background-color: none; -fx-border-color: white;" text="Voltar ao Menu" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <style>
+                        .button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </Button>
+            </HBox>
+            <Label fx:id="statusLabel" textFill="#FFFFFF">
+                <font>
+                    <Font name="Century Gothic Bold" size="18.0" />
+                </font>
+            </Label>
+        </VBox>
+    </children>
+</AnchorPane>

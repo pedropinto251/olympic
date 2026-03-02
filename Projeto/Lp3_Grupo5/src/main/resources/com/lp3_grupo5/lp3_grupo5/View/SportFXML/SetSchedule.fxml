@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="477.0" prefWidth="542.0" style="-fx-background-color: #18191A;" stylesheets="@../stylesheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lp3_grupo5.lp3_grupo5.Controller.Sports.SetScheduleController">
+    <children>
+        <Label layoutX="168.0" layoutY="90.0" text="Evento:" textFill="#FFFFFF">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="eventComboBox" layoutX="168.0" layoutY="118.0" prefWidth="200.0" />
+
+        <Label layoutX="169.0" layoutY="150.0" text="Data de Início" textFill="#FFFFFF">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="startDatePicker" layoutX="168.0" layoutY="179.0" prefHeight="25.0" prefWidth="200.0" />
+        <TextField fx:id="startTimeField" layoutX="171.0" layoutY="213.0" prefHeight="26.0" prefWidth="193.0" promptText="Hora de Início(XX:XX)" style="-fx-background-color: none; -fx-border-color: white; -fx-border-width: 0 0 1 0; -fx-text-fill: WHITE;">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+        <TextField fx:id="durationField" layoutX="171.0" layoutY="260.0" prefHeight="26.0" prefWidth="193.0" promptText="Duração (Horas)" style="-fx-background-color: none; -fx-border-color: white; -fx-border-width: 0 0 1 0; -fx-text-fill: WHITE;">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+
+        <Label layoutX="170.0" layoutY="307.0" prefHeight="20.0" prefWidth="46.0" text="Local:" textFill="#FFFFFF">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="locationComboBox" layoutX="171.0" layoutY="333.0" prefWidth="200.0" />
+
+        <Button fx:id="saveButton" layoutX="221.0" layoutY="368.0" onAction="#handleSave" prefHeight="38.0" prefWidth="100.0" style="-fx-background-color: none; -fx-border-color: white;" text="Salvar" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+            <style>
+                .button:hover {
+                -fx-background-color: #4A4B4C;
+                -fx-cursor: hand;
+                }
+            </style>
+        </Button>
+      <Label layoutX="146.0" layoutY="31.0" prefHeight="35.0" prefWidth="250.0" text="Definir Hora de Data" textFill="#FFFFFF">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

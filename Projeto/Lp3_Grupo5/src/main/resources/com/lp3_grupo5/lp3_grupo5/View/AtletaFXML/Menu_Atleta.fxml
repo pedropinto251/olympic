@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="566.0" prefWidth="1123.0" style="-fx-background-color: #18191A;" stylesheets="@../stylesheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lp3_grupo5.lp3_grupo5.Controller.Menus.MenuAtletaController">
+    <children>
+        <Pane layoutX="-59.0" layoutY="-1.0" prefHeight="761.0" prefWidth="1467.0" style="-fx-background-color: #242526;">
+            <children>
+                <!-- Imagem de fundo -->
+                <ImageView fitHeight="644.0" fitWidth="1415.0" layoutX="54.0" layoutY="120.0" />
+                <!-- Título do menu -->
+                <Text fill="WHITE" fontSmoothingType="LCD" layoutX="369.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu do Atleta">
+                    <font>
+                        <Font name="System Bold" size="40.0" />
+                    </font>
+                    <effect>
+                        <Glow />
+                    </effect>
+                </Text>
+                <!-- Painel de cabeçalho -->
+                <Pane prefHeight="120.0" prefWidth="1467.0" style="-fx-background-color: #242526;">
+                    <children>
+                        <Label layoutX="218.0" layoutY="27.0" prefHeight="66.0" prefWidth="492.0" text="Menu do Atleta " textFill="WHITE">
+                            <font>
+                                <Font name="Webdings" size="50.0" />
+                            </font>
+                            <effect>
+                                <Glow />
+                            </effect>
+                        </Label>
+                        <Label layoutX="127.0" prefHeight="120.0" prefWidth="506.0" text="🏃" textFill="WHITE">
+                            <font>
+                                <Font name="Century Gothic Bold" size="50.0" />
+                            </font>
+                            <effect>
+                                <Glow />
+                            </effect>
+                        </Label>
+                        <Button fx:id="btnPassword" layoutX="1195.0" layoutY="34.0" onAction="#handleBtnPassword" prefHeight="53.0" prefWidth="104.0" style="-fx-background-color: none; -fx-border-color: white;" text="Password" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                            <style>
+                                .button:hover {
+                                -fx-background-color: #4A4B4C;
+                                -fx-cursor: hand;
+                                }
+                            </style>
+                        </Button>
+                        <Button fx:id="btnCalendario" layoutX="1007.0" layoutY="34.0" onAction="#handleBtnCalendar" prefHeight="53.0" prefWidth="110.0" style="-fx-background-color: none; -fx-border-color: white;" text="Calendário" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                            <style>
+                                .button:hover {
+                                -fx-background-color: #4A4B4C;
+                                -fx-cursor: hand;
+                                }
+                            </style>
+                        </Button>
+                        <Button fx:id="btnFoto" layoutX="782.0" layoutY="34.0" onAction="#handleBtnPhotoEdit" prefHeight="53.0" prefWidth="150.0" style="-fx-background-color: none; -fx-border-color: white;" text="Mudar foto" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                            <style>
+                                .button:hover {
+                                -fx-background-color: #4A4B4C;
+                                -fx-cursor: hand;
+                                }
+                            </style>
+                        </Button>
+                    </children>
+                </Pane>
+                <!-- Botões principais -->
+                <JFXButton fx:id="btnInscricao" layoutX="876.0" layoutY="442.0" onAction="#handleBtnInscricao" prefHeight="149.0" prefWidth="526.0" style="-fx-background-color: none; -fx-border-color: white;" text="Inscrição em Desporto Coletivo" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Century Gothic Bold" size="30.0" />
+                    </font>
+                    <style>
+                        .jfx-button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </JFXButton>
+                <JFXButton fx:id="btnVisualizarEquipasResultados" layoutX="129.0" layoutY="212.0" onAction="#handleBtnVisualizarEquipasResultados" prefHeight="149.0" prefWidth="526.0" style="-fx-background-color: none; -fx-border-color: white;" text="Visualizar Resultados Individuais" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Century Gothic Bold" size="30.0" />
+                    </font>
+                    <style>
+                        .jfx-button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </JFXButton>
+                <JFXButton fx:id="btnEquipasInscrito" layoutX="871.0" layoutY="212.0" onAction="#handleBtnEquipasInscrito" prefHeight="149.0" prefWidth="526.0" style="-fx-background-color: none; -fx-border-color: white;" text="Inscrição em Desporto" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Century Gothic Bold" size="30.0" />
+                    </font>
+                    <style>
+                        .jfx-button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </JFXButton>
+                <JFXButton fx:id="btnResultadosEquipasInscrito" layoutX="129.0" layoutY="442.0" onAction="#handleBtnResultadosEquipasInscrito" prefHeight="149.0" prefWidth="526.0" style="-fx-background-color: none; -fx-border-color: white;" text="Visualizar Resultados de Equipa" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Century Gothic Bold" size="30.0" />
+                    </font>
+                    <style>
+                        .jfx-button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </JFXButton>
+                <Button fx:id="btnSair" layoutX="1298.0" layoutY="650.0" onAction="#handleBtnSair" prefHeight="53.0" prefWidth="104.0" style="-fx-background-color: none; -fx-border-color: white;" text="Sair" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <style>
+                        .button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </Button>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

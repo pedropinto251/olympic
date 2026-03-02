@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="1200.0" style="-fx-background-color: #18191A;" stylesheets="@../stylesheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lp3_grupo5.lp3_grupo5.Controller.Athlete.AthleteParticipationReadController">
+    <children>
+        <ImageView fitHeight="700.0" fitWidth="1200.0" pickOnBounds="true" />
+        <Pane prefHeight="120.0" prefWidth="1200.0" style="-fx-background-color: #242526;" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label layoutX="115.0" layoutY="24.0" prefHeight="66.0" prefWidth="639.0" text="Participações Individuais" textFill="#FFFFFF">
+                    <font>
+                        <Font name="Century Gothic Bold" size="50.0" />
+                    </font>
+                    <effect>
+                        <Glow />
+                    </effect>
+                </Label>
+                <Button fx:id="btnMenu" layoutX="1082.0" layoutY="34.0" onAction="#handleBtnMenu" prefHeight="53.0" prefWidth="104.0" style="-fx-background-color: none; -fx-border-color: white;" text="Menu" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <style>
+                        .button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </Button>
+            </children>
+        </Pane>
+        <Pane layoutY="121.0" prefHeight="606.0" prefWidth="1200.0">
+            <children>
+                <TableView fx:id="participationTable" layoutX="20.0" layoutY="56.0" prefHeight="471.0" prefWidth="1162.0" styleClass="tabela1">
+                    <columns>
+                        <TableColumn fx:id="yearColumn" prefWidth="129.6" text="Ano" />
+                        <TableColumn fx:id="resultColumn" prefWidth="164.8" text="Resultado" />
+                        <TableColumn fx:id="goldColumn" prefWidth="112.0" text="Ouro" />
+                        <TableColumn fx:id="silverColumn" prefWidth="139.2" text="Prata" />
+                        <TableColumn fx:id="bronzeColumn" prefWidth="124.0" text="Bronze" />
+                        <TableColumn fx:id="diplomaColumn" prefWidth="99.2" text="Diploma" />
+                        <TableColumn fx:id="sportColumn" prefWidth="214.4" text="Desporto" />
+                        <TableColumn fx:id="inativeColumn" prefWidth="184.8" text="Desativado" />
+                    </columns>
+                </TableView>
+                <Text fill="#FFFFFF" layoutX="33.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de Participações">
+                    <font>
+                        <Font name="Century Gothic Bold" size="25.0" />
+                    </font>
+                </Text>
+                <Button fx:id="btnDelete" layoutX="971.0" layoutY="541.0" mnemonicParsing="false" onAction="#handleBtnDelete" style="-fx-background-color: none; -fx-border-color: white;" text="Desativar Participação" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <style>
+                        .button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </Button>
+                <ComboBox fx:id="sportComboBox" layoutX="20.0" layoutY="536.0" onAction="#filterBySport" prefWidth="150.0" promptText="Desporto" />
+                <ComboBox fx:id="yearComboBox" layoutX="191.0" layoutY="536.0" onAction="#filterByYear" prefWidth="150.0" promptText="Ano" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

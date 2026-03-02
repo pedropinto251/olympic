@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="823.0" prefWidth="1295.0" style="-fx-background-color: #18191A;" stylesheets="@../stylesheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lp3_grupo5.lp3_grupo5.Controller.API.GameController">
+    <children>
+        <TableView fx:id="gameTableView" layoutX="16.0" layoutY="157.0" prefHeight="300.0" prefWidth="1264.0" styleClass="table-view">
+            <columns>
+                <TableColumn fx:id="gameIdColumn" prefWidth="237.0" styleClass="table-column" text="ID" />
+                <TableColumn fx:id="gameGroupIdColumn" prefWidth="163.0" styleClass="table-column" text="Group ID" />
+                <TableColumn fx:id="gameStartDateColumn" prefWidth="238.0" styleClass="table-column" text="Data de Início" />
+                <TableColumn fx:id="gameEndDateColumn" prefWidth="296.0" styleClass="table-column" text="Data de Fim" />
+                <TableColumn fx:id="gameLocationColumn" prefWidth="167.0" styleClass="table-column" text="Localização" />
+                <TableColumn fx:id="gameCapacityColumn" prefWidth="167.0" styleClass="table-column" text="Capacidade" />
+                <TableColumn fx:id="gameSportColumn" prefWidth="167.0" styleClass="table-column" text="Esporte" />
+                <TableColumn fx:id="gameActiveColumn" prefWidth="167.0" styleClass="table-column" text="Ativo" />
+                <TableColumn fx:id="gameEventIdColumn" prefWidth="167.0" styleClass="table-column" text="ID do Evento" />
+            </columns>
+        </TableView>
+        <TableView fx:id="ticketTableView" layoutX="18.0" layoutY="483.0" prefHeight="300.0" prefWidth="1264.0" styleClass="table-view">
+            <columns>
+                <TableColumn fx:id="ticketIdColumn" prefWidth="237.0" styleClass="table-column" text="ID" />
+                <TableColumn fx:id="ticketStartDateColumn" prefWidth="163.0" styleClass="table-column" text="Data de Início" />
+                <TableColumn fx:id="ticketEndDateColumn" prefWidth="238.0" styleClass="table-column" text="Data de Fim" />
+                <TableColumn fx:id="ticketLocationColumn" prefWidth="242.0" styleClass="table-column" text="Localização" />
+                <TableColumn fx:id="ticketSeatColumn" prefWidth="160.0" styleClass="table-column" text="Bancada" />
+                <TableColumn fx:id="ticketQRColumn" prefWidth="228.0" styleClass="table-column" text="QR Code">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="TicketQRImage" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <Pane layoutY="-1.0" prefHeight="129.0" prefWidth="1295.0" style="-fx-background-color: #242526;">
+            <children>
+                <Label layoutX="47.0" layoutY="32.0" prefHeight="66.0" prefWidth="584.0" style="-fx-font-weight: BOLD;" text="Lista de Jogos e Bilhetes" textFill="#FFFFFF">
+                    <font>
+                        <Font name="Century Gothic Bold" size="50.0" />
+                    </font>
+                </Label>
+                <Button fx:id="btnMenu" layoutX="1164.0" layoutY="45.0" onAction="#handleBtnMenu" prefHeight="53.0" prefWidth="104.0" style="-fx-background-color: none; -fx-border-color: white;" text="Menu" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <style>
+                        .button:hover {
+                        -fx-background-color: #4A4B4C;
+                        -fx-cursor: hand;
+                        }
+                    </style>
+                </Button>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

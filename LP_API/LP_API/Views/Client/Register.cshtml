@@ -1,0 +1,209 @@
+﻿@model LP_API.Model.RegisterClient
+@{
+    ViewData["Title"] = "register";
+}
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #007bff; /* Fundo azul */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url('/images/Background.png') no-repeat center center;
+            background-size: cover;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+        }
+
+        h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .form-group label {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+                border-color: #0056b3;
+            }
+
+        .btn-secondary {
+            background-color: #0056b3;
+            border-color: #0056b3;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+        }
+
+            .btn-secondary:hover {
+                background-color: #003f7f;
+                border-color: #003f7f;
+            }
+
+        .text-center a {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .password-requirements {
+            text-align: left;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+            .password-requirements span {
+                display: block;
+                margin-top: 5px;
+            }
+
+            .password-requirements .valid {
+                color: green;
+            }
+
+            .password-requirements .invalid {
+                color: red;
+            }
+
+        .form-control.invalid {
+            border-color: red;
+        }
+
+        .invalid-field {
+            border-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2 class="text-center">Registar</h2>
+        <form asp-action="Register" method="post">
+            <div class="form-group">
+                <label for="Name">Nome</label>
+                <input id="Name" name="Name" class="form-control" value="@Model.Name" placeholder="Introduza o seu nome" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <input id="Email" name="Email" class="form-control" value="@Model.Email" placeholder="Introduza o seu email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Password">Palavra-passe</label>
+                <input id="Password" name="Password" type="password" class="form-control" value="@Model.Password" placeholder="Introduza a sua palavra-passe" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+                <div class="password-requirements">
+                    <span id="length" class="invalid">Mínimo de 6 caracteres</span>
+                    <span id="uppercase" class="invalid">Pelo menos uma letra maiúscula</span>
+                    <span id="lowercase" class="invalid">Pelo menos uma letra minúscula</span>
+                    <span id="number" class="invalid">Pelo menos um número</span>
+                    <span id="special" class="invalid">Pelo menos um caractere especial</span>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" id="registerButton" disabled>Registar</button>
+        </form>
+        <div class="text-center mt-3">
+            <a href="/Login" class="btn btn-secondary">Já tem uma conta? Login</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation-unobtrusive@3.2.11/dist/jquery.validate.unobtrusive.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('form').validate({
+                rules: {
+                    Name: {
+                        required: true
+                    },
+                    Email: {
+                        required: true,
+                        email: true
+                    },
+                    Password: {
+                        minlength: 6,
+                        pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$!%*?&.])[A-Za-z\d$!%*?&.]{6,}$/
+                    }
+                },
+                messages: {
+                    Name: {
+                        required: "O nome é obrigatório."
+                    },
+                    Email: {
+                        required: "O email é obrigatório.",
+                        email: "Por favor, introduza um email válido."
+                    },
+                    Password: {
+                        minlength: "A palavra-passe deve ter pelo menos 6 caracteres.",
+                        pattern: "A palavra-passe deve conter pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial."
+                    }
+                }
+            });
+
+            function validateForm() {
+                var name = $('#Name').val().trim() !== '';
+                var email = $('#Email').val().trim() !== '';
+                var password = $('#Password').val();
+                var length = password.length >= 6;
+                var uppercase = /[A-Z]/.test(password);
+                var lowercase = /[a-z]/.test(password);
+                var number = /\d/.test(password);
+                var special = /[$!%*?&.]/.test(password);
+
+                $('#length').toggleClass('valid', length).toggleClass('invalid', !length);
+                $('#uppercase').toggleClass('valid', uppercase).toggleClass('invalid', !uppercase);
+                $('#lowercase').toggleClass('valid', lowercase).toggleClass('invalid', !lowercase);
+                $('#number').toggleClass('valid', number).toggleClass('invalid', !number);
+                $('#special').toggleClass('valid', special).toggleClass('invalid', !special);
+
+                $('#Name').toggleClass('invalid-field', !name);
+                $('#Email').toggleClass('invalid-field', !email);
+
+                var allValid = name && email && length && uppercase && lowercase && number && special;
+                $('#registerButton').prop('disabled', !allValid);
+
+                if (allValid) {
+                    $('#Password').removeClass('invalid');
+                } else {
+                    $('#Password').addClass('invalid');
+                }
+            }
+
+            $('#Name, #Email, #Password').on('input', validateForm);
+        });
+    </script>
+</body>
+</html>

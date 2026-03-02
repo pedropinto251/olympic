@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="566.0" prefWidth="1123.0" style="-fx-background-color: #18191A;" stylesheets="@../stylesheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lp3_grupo5.lp3_grupo5.Controller.Menus.GestaoEventoController">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="761.0" prefWidth="1302.0" style="-fx-background-color: #242526;">
+         <children>
+            <Pane prefHeight="120.0" prefWidth="1302.0">
+               <children>
+                  <Label layoutX="405.0" layoutY="39.0" prefHeight="66.0" prefWidth="492.0" style="-fx-font-weight: BOLD;" text="Gestão de Evento" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="50.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="BANK" layoutX="198.0" layoutY="89.0" size="50">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </FontAwesomeIconView>
+                  <Button fx:id="btnSair" layoutX="1009.0" layoutY="45.0" onAction="#handleBtnSair" prefHeight="53.0" prefWidth="104.0" style="-fx-background-color: none; -fx-border-color: white;" text="Menu" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <style>
+                  .button:hover {
+                  -fx-background-color: #4A4B4C;
+                  -fx-cursor: hand;
+                  }
+               </style>
+                  </Button>
+               </children>
+            </Pane>
+            <JFXButton fx:id="btnAproveInscription" layoutX="878.0" layoutY="142.0" onAction="#handleBtnAproveInscription" prefHeight="215.0" prefWidth="237.5" style="-fx-background-color: none; -fx-border-color: white;" text="Aprovar &#10;Inscrições&#10;" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic Bold" size="30.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+               <style>
+                  .jfx-button:hover {
+                  -fx-background-color: #4A4B4C;
+                  -fx-cursor: hand;
+                  }
+               </style>
+            </JFXButton>
+            <JFXButton fx:id="btnInitSport" layoutX="190.0" layoutY="411.0" onAction="#handleBtnInitSport" prefHeight="215.0" prefWidth="237.5" style="-fx-background-color: none; -fx-border-color: white;" text="Iniciar &#10;Desportos&#10;&#10;" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic Bold" size="30.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+               <style>
+                  .jfx-button:hover {
+                  -fx-background-color: #4A4B4C;
+                  -fx-cursor: hand;
+                  }
+               </style>
+            </JFXButton>
+            <JFXButton fx:id="btnReadIndividual" layoutX="532.0" layoutY="142.0" onAction="#handlebtnReadIndividual" prefHeight="215.0" prefWidth="237.5" style="-fx-background-color: none; -fx-border-color: white;" text="Listar&#10;Inscrições&#10;Coletivas&#10;" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic Bold" size="30.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+               <style>
+                  .jfx-button:hover {
+                  -fx-background-color: #4A4B4C;
+                  -fx-cursor: hand;
+                  }
+               </style>
+            </JFXButton>
+            <JFXButton fx:id="btnReadCollective" layoutX="190.0" layoutY="142.0" onAction="#handlebtnReadCollective" prefHeight="215.0" prefWidth="237.5" style="-fx-background-color: none; -fx-border-color: white;" text="Listar &#10;Inscrições&#10;Individuais&#10;" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic Bold" size="30.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+               <style>
+                  .jfx-button:hover {
+                  -fx-background-color: #4A4B4C;
+                  -fx-cursor: hand;
+                  }
+               </style>
+            </JFXButton>
+            <JFXButton fx:id="btnIntResult" layoutX="532.0" layoutY="411.0" onAction="#handleBtnIntResult" prefHeight="215.0" prefWidth="237.5" style="-fx-background-color: none; -fx-border-color: white;" text="Intervalo&#10;De&#10;Resultados&#10;&#10;" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic Bold" size="30.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+               <style>
+                  .jfx-button:hover {
+                  -fx-background-color: #4A4B4C;
+                  -fx-cursor: hand;
+                  }
+               </style>
+            </JFXButton>
+            <JFXButton fx:id="btnSportEvent" layoutX="878.0" layoutY="411.0" onAction="#handleBtnSportEvent" prefHeight="215.0" prefWidth="237.5" style="-fx-background-color: none; -fx-border-color: white;" text="Modalidades&#10;Do&#10;Evento&#10;" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic Bold" size="30.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+               <style>
+                  .jfx-button:hover {
+                  -fx-background-color: #4A4B4C;
+                  -fx-cursor: hand;
+                  }
+               </style>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
